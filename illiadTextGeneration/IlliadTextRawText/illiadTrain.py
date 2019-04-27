@@ -12,6 +12,9 @@ from keras.utils import np_utils
 filename = "illiad.txt"
 raw_text = open(filename).read()
 raw_text = raw_text.lower()
+raw_text = raw_text.replace('  ','')
+raw_text = raw_text.replace('  ','')
+print(raw_text)
 # create mapping of unique chars to integers, and a reverse mapping
 chars = sorted(list(set(raw_text)))
 char_to_int = dict((c, i) for i, c in enumerate(chars))
